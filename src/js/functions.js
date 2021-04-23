@@ -1,7 +1,7 @@
-function appendMessage(message, you = true) {
+function appendMessage(message, you = true, time = false) {
   const messageElement = document.createElement('div');
-
-  message += " " + actualTime();
+  
+  if(!time) message += " " + actualTime();
   messageElement.innerText = message;
 
   if (you === false) {
